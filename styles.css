@@ -1,0 +1,828 @@
+@font-face {
+  font-family: "Alexandria";
+  src: url("fonts/Alexandria/Alexandria-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Lexend Exa";
+  src: url("fonts/Lexend_Exa/LexendExa-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Lexend Mega";
+  src: url("fonts/Lexend_Mega/LexendMega-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("fonts/Poiret_One/PoiretOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #b6b6b6;
+}
+
+h1,
+.cabecalho,
+.setaDireitaDescricao,
+.setaEsquerdaDescricao 
+.containerDosIcones;{
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: pan-y;
+  margin: 0;
+  padding: 0;
+}
+
+.saibaMais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50vh;
+  padding: 1rem;
+  background-color: inherit;
+  border: 1px solid #00ff7f;
+  color: #00ff7f;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-family: "Sansation";
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+#iconeTelefoneSaibaMais {
+  font-size: 1rem;
+}
+#videoHorizontalMobile,
+#videoDesktop,
+#videoVerticalMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  display: none;
+}
+/* SOBRE NÓS */
+
+h3 {
+  font-family: "Sansation";
+  font-size: 1.6em;
+}
+
+.containerSobreNos {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.87) 20%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.87) 80%,
+      rgba(0, 0, 0) 100%
+    ),
+    url("https://i.imgur.com/aLmcx26.jpeg") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  flex-wrap: wrap;
+  touch-action: pan-y;
+}
+
+.fraseSobreNos {
+  font-family: "Lexend Mega";
+  max-width: 65vw;
+  font-weight: 200;
+  font-size: 1em;
+  color: rgb(216, 215, 215);
+  line-height: 1.2;
+}
+
+/* SERVIÇOS */
+
+.containerServicos {
+  max-width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  touch-action: pan-y;
+}
+
+.containerServicos h3 {
+  padding: 2rem;
+}
+.containerDosIcones {
+  display: none;
+}
+
+#boxCarrossel {
+  max-width: 100%;
+  min-height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#viewportServicos {
+  width: 70vw;
+  min-height: 30vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+#trackServicos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+  touch-action: pan-y;
+}
+
+.boxServicos {
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.caixote {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconeMaisFraseServico {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.icone {
+  font-size: 4rem;
+  padding-top: 1rem;
+}
+
+.fraseServicos {
+  font-size: 1rem;
+  font-family: "Lexend Exa";
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.botaoSaibaMais {
+  text-align: center;
+  color: #ff0055;
+  border: 1px solid #ff0055;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  padding: 0.4em 1.5em;
+  font-family: "Tomorrow";
+  transition: transform 0.3s ease-in-out;
+}
+
+.angleRight,
+.angleLeft {
+  max-width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  padding-inline: 1rem;
+}
+
+.angleLeft {
+  justify-content: flex-end;
+}
+
+.angleRight {
+  justify-content: flex-start;
+}
+
+/* DESCRIÇÃO */
+
+#containerDescricao {
+  display: none;
+  position: relative;
+  background: rgba(10, 25, 45, 0.7);
+  width: 70vw;
+  border-radius: 0 0 1rem 1rem;
+  transition: right 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+#videoDescricao {
+  display: none;
+}
+
+#fecharDescricao {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+}
+
+.boxDescricao {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+#tituloDescricao {
+  font-size: 1.5rem;
+  font-family: "Outfit";
+  color: #ffffff;
+}
+
+#textoDescricao {
+  font-size: 1rem;
+  font-family: "Outfit";
+  font-weight: 100;
+  line-height: 1.5rem;
+  color: #dcdbdb;
+}
+
+#textoDescricao p {
+  margin-block: 0.7rem;
+}
+
+/* FOOTER */
+
+footer {
+  min-height: 50vh;
+  width: 100%;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  touch-action: pan-y;
+}
+
+.boxLogoInformacaoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logoFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.2rem;
+  margin-block: 1rem;
+}
+
+.imgLogoFooter {
+  width: 25vw;
+}
+
+.fraseBoxLogoFooter {
+  width: 50vw;
+}
+
+.boxContatoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.emailFooter,
+.telefoneFooter {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 1rem;
+  white-space: normal;
+  color: grey;
+}
+
+.boxLocalizacaoFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.localizacaoFooter {
+  width: 80%;
+  gap: 0.5rem;
+  color: grey;
+  text-align: center;
+}
+
+.endereco {
+  text-align: center;
+}
+
+.boxLocalizacaoFooter h5,
+.boxContatoFooter h5 {
+  font-family: "Sansation";
+  font-size: 1.2rem;
+  color: rgb(209, 207, 207);
+}
+
+.localizacaoFooter .endereco,
+.telefoneFooter p,
+.emailFooter p {
+  font-family: "Alexandria";
+  font-size: 0.8rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+iframe {
+  width: 30%;
+  border-radius: 2rem;
+}
+
+.copyrights {
+  text-align: center;
+  border-top: 1px solid rgba(184, 182, 182, 0.767);
+  font-family: "Alexandria";
+  font-size: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  header {
+    align-items: flex-start;
+  }
+  .saibaMais {
+    display: none;
+  }
+  .cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .nomeLogoHeader {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Poiret One";
+    font-weight: 600;
+    font-size: 0.9rem;
+    gap: 5rem;
+  }
+  .menu a {
+    color: #a8a7a7;
+    letter-spacing: 0.1rem;
+  }
+  #iconeTelefoneSaibaMais {
+    display: none;
+  }
+  #viewportServicos {
+    background-color: black;
+    width: 80vw;
+  }
+  #trackServicos {
+    width: 100%;
+  }
+  .boxServicos {
+    flex: 0 0 calc(100% / 3);
+  }
+  .caixote {
+    width: 100%;
+  }
+  .fraseServicos {
+    font-size: 0.6rem;
+  }
+  #containerDescricao {
+    width: 80vw;
+    height: 58vh;
+    max-height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.638) 20%,
+      rgba(0, 0, 0, 0.333) 50%,
+      rgba(0, 0, 0, 0.638) 80%,
+      rgba(0, 0, 0, 0.885) 100%
+    );
+    box-sizing: border-box;
+    transition: transform 1s ease;
+    box-shadow: inset 8px 0 6px -4px rgba(255, 255, 255, 0.12),
+      inset -8px 0 6px -4px rgba(255, 255, 255, 0.12),
+      inset 0 -8px 6px -4px rgba(255, 255, 255, 0.12);
+  }
+  #videoDescricao {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(8px);
+  }
+  .caixoteDescricao {
+    min-height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .boxDescricao {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 2rem 1rem 1rem;
+    overflow: auto;
+  }
+
+  .boxDescricao::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .boxDescricao::-webkit-scrollbar-track {
+    background: #000000f5;
+  }
+
+  .boxDescricao::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 5px;
+  }
+
+  .boxDescricao::-webkit-scrollbar-thumb:hover {
+    background: #b6b6b6;
+  }
+  #fecharDescricao {
+    top: 1rem;
+    right: 1rem;
+  }
+  #tituloDescricao {
+    width: 95%;
+  }
+  #textoDescricao {
+    width: 90%;
+  }
+  .boxLocalizacaoFooter h5,
+  .boxContatoFooter h5 {
+    font-size: 1.3rem;
+  }
+  .localizacaoFooter .endereco,
+  .telefoneFooter p,
+  .emailFooter p {
+    font-size: 1rem;
+  }
+
+  .imgLogoFooter {
+    width: 17vw;
+  }
+
+  .fraseBoxLogoFooter {
+    width: 30vw;
+  }
+}
+@media (max-width: 1023px) and (orientation: portrait) {
+  #videoVerticalMobile {
+    display: block;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+  #videoHorizontalMobile {
+    display: block;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  #videoVerticalMobile {
+    display: none;
+  }
+  .cabecalho {
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    padding-top: 1rem;
+  }
+  .nomeLogoHeader {
+    display: block;
+    max-width: 80px;
+  }
+  .menu {
+  }
+  .menu a {
+    color: #a8a7a7;
+    letter-spacing: 0.1rem;
+  }
+  .saibaMais {
+    display: none;
+  }
+  #videoDesktop {
+    display: block;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #boxCarrossel {
+    display: none;
+  }
+
+  .containerServicos {
+    min-height: 90vh;
+  }
+  .containerServicos h3 {
+    margin-top: 2rem;
+  }
+  .setaDireitaDescricao,
+  .setaEsquerdaDescricao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 5vw;
+    font-size: 2rem;
+  }
+  .setasMaisContainerDescricao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .containerDosIcones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vw;
+  }
+  .areaIcone {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .iconeDasTelasDesktop {
+    font-size: 3rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+  .iconeAtivo {
+    background-color: #39423d;
+    box-shadow: inset 8px 0 12px -6px rgba(0, 0, 0, 0.4),
+      inset -8px 0 12px -6px rgba(0, 0, 0, 0.4),
+      inset 0 8px 12px -6px rgba(0, 0, 0, 0.4);
+  }
+
+  #containerDescricao {
+    width: 70vw;
+    height: 70vh;
+    max-height: 900px;
+    background: #39423d;
+    display: flex;
+    max-height: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 8px 0 12px -6px rgba(0, 0, 0, 0.4),
+      inset -8px 0 12px -6px rgba(0, 0, 0, 0.4),
+      inset 0 -8px 12px -6px rgba(0, 0, 0, 0.4);
+  }
+  #videoDescricao {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    min-width: auto;
+    min-height: auto;
+    width: 41%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    filter: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    z-index: 0;
+  }
+
+  #fecharDescricao {
+    display: none;
+  }
+  .caixoteDescricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  #tituloDescricao {
+    width: 100%;
+    font-size: 2rem;
+  }
+  #textoDescricao {
+    width: 100%;
+  }
+  footer {
+    width: 100vw;
+    height: 50vh;
+  }
+  .boxLogoInformacaoFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15vw;
+  }
+  .logoFooter {
+    width: 20%;
+  }
+  .imgLogoFooter {
+    max-width: 100px;
+  }
+  .fraseBoxLogoFooter {
+    max-width: 200px;
+  }
+  .boxInformacaoFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .boxContatoFooter {
+    width: 40%;
+  }
+  .boxLocalizacaoFooter {
+    width: 75%;
+  }
+  .localizacaoFooter .endereco,
+  .telefoneFooter p,
+  .emailFooter p {
+    font-size: 0.7rem;
+  }
+  .boxLocalizacaoFooter h5,
+  .boxContatoFooter h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .saibaMais:hover {
+    color: rgba(34, 205, 34, 0.936);
+    border: 1px solid rgb(44, 246, 84);
+    transform: scale(1.1);
+  }
+
+  .boxServicos:hover .iconeMaisFraseServico {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .boxServicos:hover .botaoSaibaMais {
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    cursor: pointer;
+  }
+
+  .angleRight:hover i,
+  .angleLeft:hover i {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.7);
+  }
+
+  .localizacaoFooter:hover,
+  .telefoneFooter:hover,
+  .emailFooter:hover {
+    color: white;
+  }
+  .menu a:hover {
+    color: white;
+  }
+}
+.setaDireitaDescricao:hover,
+.setaEsquerdaDescricao:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transform: scale(1.7);
+}
